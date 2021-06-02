@@ -26,14 +26,13 @@ driver.find_element_by_id('load').click()
 sleep(1)
 
 # 进入申请出校页面
-# driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsCxsq')
-driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsHome')
+# driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsCxsq')  # 直接输网址进不去
+driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsHome')    # 从学工主页点击进入
 driver.execute_script('wjdc()')
-print(driver.page_source)
+# print(driver.page_source)
 # 点击“新建”
 driver.find_element_by_class_name('right_btn').click()
 sleep(1)
-
 # 新建页面
 # 出校类型 点击“临时出校”
 driver.find_elements_by_xpath
@@ -52,6 +51,9 @@ for checkbox in checkboxes:
     checkbox.click()
 # 提交
 driver.execute_script('save()')
+# driver.execute_script('document.getElementsByClassName("weui-dialog__btn primary")[0].click()')
+sleep(1)
+driver.find_element_by_class_name('weui-dialog__btn primary').click()
 driver.quit()
 
 print('申请临时出校完成')
