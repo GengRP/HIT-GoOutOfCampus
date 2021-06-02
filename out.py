@@ -51,9 +51,10 @@ for checkbox in checkboxes:
     checkbox.click()
 # 提交
 driver.execute_script('save()')
-# driver.execute_script('document.getElementsByClassName("weui-dialog__btn primary")[0].click()')
-sleep(1)
-driver.find_element_by_class_name('weui-dialog__btn primary').click()
+sleep(.5)
+driver.execute_script('document.getElementsByClassName("weui-dialog__btn primary")[0].click()')
+# driver.find_element_by_class_name('weui-dialog__btn primary').click()
+
 driver.quit()
 
 print('申请临时出校完成')
