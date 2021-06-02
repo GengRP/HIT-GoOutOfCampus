@@ -27,7 +27,8 @@ sleep(1)
 
 # 进入申请出校页面
 # driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsCxsq')
-driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsCxsq')
+driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsHome')
+driver.execute_script('wjdc()')
 print(driver.page_source)
 # 点击“新建”
 driver.find_element_by_class_name('right_btn').click()
