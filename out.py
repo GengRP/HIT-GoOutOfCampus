@@ -26,6 +26,7 @@ driver.find_element_by_id('load').click()
 
 # 进入申请出校页面
 driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsCxsq')
+print(driver.page_source)
 # 点击“新建”
 driver.find_element_by_class_name('right_btn').click()
 sleep(1)
